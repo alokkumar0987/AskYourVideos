@@ -1,0 +1,12 @@
+.venv/
+.cache/
+.askvideo*/
+samples/
+out/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+recordings/
+data/
+*.pt
+*.onnx

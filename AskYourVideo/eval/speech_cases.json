@@ -1,0 +1,262 @@
+[
+  {
+    "video": "samples/Cooking_cake.mp4",
+    "query": "a man eating a biscuit",
+    "type": "visual",
+    "window": [
+      266,
+      276
+    ]
+  },
+  {
+    "video": "samples/Cooking_cake.mp4",
+    "query": "kneading dough on a floured counter",
+    "type": "visual",
+    "window": [
+      120,
+      150
+    ]
+  },
+  {
+    "video": "samples/Cooking_cake.mp4",
+    "query": "cutting dough with a round biscuit cutter",
+    "type": "visual",
+    "window": [
+      178,
+      192
+    ]
+  },
+  {
+    "video": "samples/Cooking_cake.mp4",
+    "query": "brushing butter on biscuits in a cast iron skillet",
+    "type": "visual",
+    "window": [
+      205,
+      225
+    ]
+  },
+  {
+    "video": "samples/Cooking_cake.mp4",
+    "query": "a package of Challenge butter",
+    "type": "visual",
+    "window": [
+      236,
+      246
+    ]
+  },
+  {
+    "video": "samples/Cooking_cake.mp4",
+    "query": "golden baked biscuits",
+    "type": "visual",
+    "window": [
+      0,
+      12
+    ]
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "a woman in a blue outfit talking to the camera in a kitchen",
+    "type": "visual",
+    "window": [
+      [
+        14,
+        24
+      ],
+      [
+        212,
+        242
+      ]
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "egg halves coated in red masala roasting in a pan",
+    "type": "visual",
+    "window": [
+      74,
+      86
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "a screen showing a written list of ingredients",
+    "type": "visual",
+    "window": [
+      244,
+      254
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "why eggs are good to include in your diet",
+    "type": "spoken",
+    "window": [
+      12,
+      24
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "which Indian state this dish comes from",
+    "type": "spoken",
+    "window": [
+      24,
+      36
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "how many eggs were boiled for the recipe",
+    "type": "spoken",
+    "window": [
+      36,
+      44
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "where to buy her cookbook",
+    "type": "spoken",
+    "window": [
+      244,
+      264
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "frying chopped onions until golden",
+    "type": "mixed",
+    "window": [
+      92,
+      112
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "adding tomato puree to the onion mixture",
+    "type": "mixed",
+    "window": [
+      124,
+      136
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_xH2iedsq0qA.mp4",
+    "query": "putting the roasted eggs into the simmering gravy",
+    "type": "mixed",
+    "window": [
+      166,
+      180
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "a stack of folded yellow pancakes on a steel plate",
+    "type": "visual",
+    "window": [
+      316,
+      352
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "brushing oil on a hot griddle with a red silicone brush",
+    "type": "visual",
+    "window": [
+      254,
+      264
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "dry flour in a steel bowl on a wooden board",
+    "type": "visual",
+    "window": [
+      14,
+      46
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "subah jaldi mein banne wala aasan nashta",
+    "type": "spoken",
+    "window": [
+      0,
+      16
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "she asks viewers which city they are watching from",
+    "type": "spoken",
+    "window": [
+      76,
+      96
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "बिना दही और ईनो के बनी रेसिपी",
+    "type": "spoken",
+    "window": [
+      224,
+      236
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "the batter swelled up after resting because of semolina and gram flour",
+    "type": "spoken",
+    "window": [
+      156,
+      172
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "adding chopped spinach and tomatoes to the pan",
+    "type": "mixed",
+    "window": [
+      124,
+      140
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "spreading batter on the griddle without shaping it",
+    "type": "mixed",
+    "window": [
+      264,
+      280
+    ],
+    "annotator": "claude-draft"
+  },
+  {
+    "video": "samples/yt_8YNa-WLQ0gg.mp4",
+    "query": "adding red chili flakes and spices to the batter",
+    "type": "mixed",
+    "window": [
+      164,
+      182
+    ],
+    "annotator": "claude-draft"
+  }
+]

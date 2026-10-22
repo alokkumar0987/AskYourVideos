@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "top1": {
+      "retrieval": "5/6",
+      "support": "3/6",
+      "gate": "5/6",
+      "gate_query_labels": "6/6"
+    },
+    "detector_frames_per_query": 80,
+    "video_frames": 8983,
+    "detector_fraction": 0.0089,
+    "verify_seconds_per_query": 19.3
+  },
+  "rows": [
+    {
+      "query": "a man eating a biscuit",
+      "window": [
+        266,
+        276
+      ],
+      "retrieval": false,
+      "support": true,
+      "gate": true,
+      "gate_query_labels": true
+    },
+    {
+      "query": "kneading dough on a floured counter",
+      "window": [
+        120,
+        150
+      ],
+      "retrieval": true,
+      "support": true,
+      "gate": true,
+      "gate_query_labels": true
+    },
+    {
+      "query": "cutting dough with a round biscuit cutter",
+      "window": [
+        178,
+        192
+      ],
+      "retrieval": true,
+      "support": false,
+      "gate": false,
+      "gate_query_labels": true
+    },
+    {
+      "query": "brushing butter on biscuits in a cast iron skillet",
+      "window": [
+        205,
+        225
+      ],
+      "retrieval": true,
+      "support": true,
+      "gate": true,
+      "gate_query_labels": true
+    },
+    {
+      "query": "a package of Challenge butter",
+      "window": [
+        236,
+        246
+      ],
+      "retrieval": true,
+      "support": false,
+      "gate": true,
+      "gate_query_labels": true
+    },
+    {
+      "query": "golden baked biscuits",
+      "window": [
+        0,
+        12
+      ],
+      "retrieval": true,
+      "support": false,
+      "gate": true,
+      "gate_query_labels": true
+    }
+  ]
+}

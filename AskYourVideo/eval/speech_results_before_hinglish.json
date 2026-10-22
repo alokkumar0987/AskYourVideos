@@ -1,0 +1,1109 @@
+{
+  "table": {
+    "all": {
+      "vision": {
+        "R@1": 0.692,
+        "R@5": 0.808,
+        "n": 26
+      },
+      "speech": {
+        "R@1": 0.385,
+        "R@5": 0.654,
+        "n": 26
+      },
+      "fused-equal": {
+        "R@1": 0.615,
+        "R@5": 0.885,
+        "n": 26
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 0.654,
+        "R@5": 0.808,
+        "n": 26
+      },
+      "fused-adaptive": {
+        "R@1": 0.692,
+        "R@5": 0.846,
+        "n": 26
+      }
+    },
+    "type:mixed": {
+      "vision": {
+        "R@1": 1.0,
+        "R@5": 1.0,
+        "n": 6
+      },
+      "speech": {
+        "R@1": 0.5,
+        "R@5": 0.833,
+        "n": 6
+      },
+      "fused-equal": {
+        "R@1": 1.0,
+        "R@5": 1.0,
+        "n": 6
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 1.0,
+        "R@5": 1.0,
+        "n": 6
+      },
+      "fused-adaptive": {
+        "R@1": 1.0,
+        "R@5": 1.0,
+        "n": 6
+      }
+    },
+    "type:spoken": {
+      "vision": {
+        "R@1": 0.125,
+        "R@5": 0.375,
+        "n": 8
+      },
+      "speech": {
+        "R@1": 0.375,
+        "R@5": 0.75,
+        "n": 8
+      },
+      "fused-equal": {
+        "R@1": 0.375,
+        "R@5": 0.75,
+        "n": 8
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 0.125,
+        "R@5": 0.375,
+        "n": 8
+      },
+      "fused-adaptive": {
+        "R@1": 0.375,
+        "R@5": 0.75,
+        "n": 8
+      }
+    },
+    "type:visual": {
+      "vision": {
+        "R@1": 0.917,
+        "R@5": 1.0,
+        "n": 12
+      },
+      "speech": {
+        "R@1": 0.333,
+        "R@5": 0.5,
+        "n": 12
+      },
+      "fused-equal": {
+        "R@1": 0.583,
+        "R@5": 0.917,
+        "n": 12
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 0.833,
+        "R@5": 1.0,
+        "n": 12
+      },
+      "fused-adaptive": {
+        "R@1": 0.75,
+        "R@5": 0.833,
+        "n": 12
+      }
+    },
+    "video:Cooking_cake.mp4": {
+      "vision": {
+        "R@1": 0.833,
+        "R@5": 1.0,
+        "n": 6
+      },
+      "speech": {
+        "R@1": 0.5,
+        "R@5": 0.667,
+        "n": 6
+      },
+      "fused-equal": {
+        "R@1": 0.667,
+        "R@5": 0.833,
+        "n": 6
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 0.667,
+        "R@5": 1.0,
+        "n": 6
+      },
+      "fused-adaptive": {
+        "R@1": 0.667,
+        "R@5": 0.833,
+        "n": 6
+      }
+    },
+    "video:yt_8YNa-WLQ0gg.mp4": {
+      "vision": {
+        "R@1": 0.6,
+        "R@5": 0.6,
+        "n": 10
+      },
+      "speech": {
+        "R@1": 0.2,
+        "R@5": 0.6,
+        "n": 10
+      },
+      "fused-equal": {
+        "R@1": 0.6,
+        "R@5": 0.9,
+        "n": 10
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 0.6,
+        "R@5": 0.6,
+        "n": 10
+      },
+      "fused-adaptive": {
+        "R@1": 0.7,
+        "R@5": 0.9,
+        "n": 10
+      }
+    },
+    "video:yt_xH2iedsq0qA.mp4": {
+      "vision": {
+        "R@1": 0.7,
+        "R@5": 0.9,
+        "n": 10
+      },
+      "speech": {
+        "R@1": 0.5,
+        "R@5": 0.7,
+        "n": 10
+      },
+      "fused-equal": {
+        "R@1": 0.6,
+        "R@5": 0.9,
+        "n": 10
+      },
+      "fused-weighted (LOO)": {
+        "R@1": 0.7,
+        "R@5": 0.9,
+        "n": 10
+      },
+      "fused-adaptive": {
+        "R@1": 0.7,
+        "R@5": 0.8,
+        "n": 10
+      }
+    }
+  },
+  "loo_weights": {
+    "0.0": 2,
+    "0.1": 24
+  },
+  "rows": [
+    {
+      "video": "samples/Cooking_cake.mp4",
+      "query": "a man eating a biscuit",
+      "type": "visual",
+      "window": [
+        266,
+        276
+      ],
+      "loo_speech_weight": 0.0,
+      "adaptive_weights": [
+        0.89,
+        1.11
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/Cooking_cake.mp4",
+      "query": "kneading dough on a floured counter",
+      "type": "visual",
+      "window": [
+        120,
+        150
+      ],
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.9,
+        1.1
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/Cooking_cake.mp4",
+      "query": "cutting dough with a round biscuit cutter",
+      "type": "visual",
+      "window": [
+        178,
+        192
+      ],
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.25,
+        0.75
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/Cooking_cake.mp4",
+      "query": "brushing butter on biscuits in a cast iron skillet",
+      "type": "visual",
+      "window": [
+        205,
+        225
+      ],
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.37,
+        0.63
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/Cooking_cake.mp4",
+      "query": "a package of Challenge butter",
+      "type": "visual",
+      "window": [
+        236,
+        246
+      ],
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.34,
+        0.66
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/Cooking_cake.mp4",
+      "query": "golden baked biscuits",
+      "type": "visual",
+      "window": [
+        0,
+        12
+      ],
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.21,
+        0.79
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": false
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "a woman in a blue outfit talking to the camera in a kitchen",
+      "type": "visual",
+      "window": [
+        [
+          14,
+          24
+        ],
+        [
+          212,
+          242
+        ]
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.13,
+        0.87
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "egg halves coated in red masala roasting in a pan",
+      "type": "visual",
+      "window": [
+        74,
+        86
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.81,
+        1.19
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": false
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "a screen showing a written list of ingredients",
+      "type": "visual",
+      "window": [
+        244,
+        254
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.27,
+        0.73
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "why eggs are good to include in your diet",
+      "type": "spoken",
+      "window": [
+        12,
+        24
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.03,
+        0.97
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": false
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": false
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "which Indian state this dish comes from",
+      "type": "spoken",
+      "window": [
+        24,
+        36
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.0,
+      "adaptive_weights": [
+        0.7,
+        1.3
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "how many eggs were boiled for the recipe",
+      "type": "spoken",
+      "window": [
+        36,
+        44
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.2,
+        0.8
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "where to buy her cookbook",
+      "type": "spoken",
+      "window": [
+        244,
+        264
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.06,
+        0.94
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "frying chopped onions until golden",
+      "type": "mixed",
+      "window": [
+        92,
+        112
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.85,
+        1.15
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "adding tomato puree to the onion mixture",
+      "type": "mixed",
+      "window": [
+        124,
+        136
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.86,
+        1.14
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_xH2iedsq0qA.mp4",
+      "query": "putting the roasted eggs into the simmering gravy",
+      "type": "mixed",
+      "window": [
+        166,
+        180
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.08,
+        0.92
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "a stack of folded yellow pancakes on a steel plate",
+      "type": "visual",
+      "window": [
+        316,
+        352
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.01,
+        0.99
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "brushing oil on a hot griddle with a red silicone brush",
+      "type": "visual",
+      "window": [
+        254,
+        264
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.14,
+        0.86
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "dry flour in a steel bowl on a wooden board",
+      "type": "visual",
+      "window": [
+        14,
+        46
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.09,
+        0.91
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "subah jaldi mein banne wala aasan nashta",
+      "type": "spoken",
+      "window": [
+        0,
+        16
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.81,
+        1.19
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": false
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": false
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "she asks viewers which city they are watching from",
+      "type": "spoken",
+      "window": [
+        76,
+        96
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.86,
+        1.14
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": false
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "बिना दही और ईनो के बनी रेसिपी",
+      "type": "spoken",
+      "window": [
+        224,
+        236
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.61,
+        1.39
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": false
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "the batter swelled up after resting because of semolina and gram flour",
+      "type": "spoken",
+      "window": [
+        156,
+        172
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.94,
+        1.06
+      ],
+      "vision": {
+        "R@1": false,
+        "R@5": false
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-adaptive": {
+        "R@1": false,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "adding chopped spinach and tomatoes to the pan",
+      "type": "mixed",
+      "window": [
+        124,
+        140
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        1.24,
+        0.76
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": false
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "spreading batter on the griddle without shaping it",
+      "type": "mixed",
+      "window": [
+        264,
+        280
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.94,
+        1.06
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    },
+    {
+      "video": "samples/yt_8YNa-WLQ0gg.mp4",
+      "query": "adding red chili flakes and spices to the batter",
+      "type": "mixed",
+      "window": [
+        164,
+        182
+      ],
+      "annotator": "claude-draft",
+      "loo_speech_weight": 0.1,
+      "adaptive_weights": [
+        0.85,
+        1.15
+      ],
+      "vision": {
+        "R@1": true,
+        "R@5": true
+      },
+      "speech": {
+        "R@1": false,
+        "R@5": true
+      },
+      "fused-equal": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-weighted (LOO)": {
+        "R@1": true,
+        "R@5": true
+      },
+      "fused-adaptive": {
+        "R@1": true,
+        "R@5": true
+      }
+    }
+  ]
+}

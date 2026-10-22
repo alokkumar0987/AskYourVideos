@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "askvideo"
+version = "0.1.0"
+description = "Ask your video: semantic segment search (SigLIP 2) + targeted detection (YOLOE) + face identity (ArcFace)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Alok Kumar" }]
+dependencies = [
+    "torch>=2.1",
+    "open_clip_torch>=2.31",  # SigLIP 2 weights landed in 2.31
+    "transformers>=4.40",  # SigLIP 2's Gemma tokenizer is loaded through transformers
+    "faiss-cpu>=1.8",
+    "ultralytics>=8.4",  # YOLOE (text-prompted detection) + ByteTrack
+    "lap>=0.5",  # ByteTrack's assignment solver
+    "opencv-python>=4.8",
+    "numpy>=1.24",
+    "pillow>=10.1",
+]
+
+[project.optional-dependencies]
+ui = ["gradio>=5,<6"]
+speech = ["faster-whisper>=1.1", "sentence-transformers>=3"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+askvideo = "askvideo.cli:main"
+askvideo-ui = "askvideo.ui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["askvideo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
