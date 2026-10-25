@@ -55,6 +55,8 @@ The pipeline has two stages. Cheap semantic retrieval runs over everything. An e
 - `out/` contains generated frames, screenshots and `architecture.html`/`.png`.
 - `eval/run_eval.py` reproduces the reported numbers (6 hand-annotated queries, ~3 min on CPU) and writes `eval/results.json`. `docs/TECHNICAL_REPORT.md` and `docs/INTERVIEW_QA.md` quote those numbers, so update them together. `docs/ARCHITECTURE.md` holds the ASCII diagrams. Update it when the pipeline changes.
 - Speech path: `speech.py` (Whisper, e5, BM25, `SpeechIndex` keyed by the visual segment ids) and `fusion.py` (two-level RRF, one vote per modality). `askvideo index ... --speech` builds it, and `askvideo search --mode vision|speech|fused` queries it. The ablation lives in `eval/run_speech_eval.py` with `eval/speech_cases.json`. The YouTube cases are filled in by the user from `eval/dump_transcripts.py` output. The YouTube samples are third-party videos: don't publish their frames or transcripts (see `samples/SOURCES.md`).
+- Search defaults to `--mode vision`: fused/speech hurt visual queries on QVHighlights (Hit@1 0.84 → 0.74, Lib@1 0.76 → 0.40) and only help queries about what was said.
+- Public benchmark: `eval/qvh_prepare.py --hf` fetches QVHighlights clips from a Hugging Face mirror (YouTube bot-checks yt-dlp on this network), `.askvideo_qvh/` indexes them, and `eval/run_qvh_eval.py` scores them with bootstrap CIs.
 
 ## Roadmap
 

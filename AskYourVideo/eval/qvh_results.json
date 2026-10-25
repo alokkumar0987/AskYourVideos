@@ -1,0 +1,1784 @@
+{
+  "n_queries": 50,
+  "n_clips": 50,
+  "expand_frac": 0.2,
+  "table": {
+    "vision": {
+      "Hit@1": 0.84,
+      "Hit@5": 0.98,
+      "R1@0.5": 0.56,
+      "R1@0.7": 0.3,
+      "Lib@1": 0.76
+    },
+    "speech": {
+      "Hit@1": 0.36,
+      "Hit@5": 0.76,
+      "R1@0.5": 0.1,
+      "R1@0.7": 0.0,
+      "Lib@1": 0.08
+    },
+    "fused-equal": {
+      "Hit@1": 0.74,
+      "Hit@5": 0.98,
+      "R1@0.5": 0.4,
+      "R1@0.7": 0.24,
+      "Lib@1": 0.36
+    },
+    "fused-adaptive": {
+      "Hit@1": 0.74,
+      "Hit@5": 1.0,
+      "R1@0.5": 0.42,
+      "R1@0.7": 0.24,
+      "Lib@1": 0.4
+    },
+    "random": {
+      "Hit@1": 0.282,
+      "Hit@5": 0.724,
+      "R1@0.5": 0.018,
+      "R1@0.7": 0.004,
+      "Lib@1": 0.006
+    }
+  },
+  "ci95": {
+    "vision": {
+      "Hit@1": [
+        0.74,
+        0.94
+      ],
+      "Hit@5": [
+        0.94,
+        1.0
+      ],
+      "R1@0.5": [
+        0.42,
+        0.7
+      ],
+      "R1@0.7": [
+        0.18,
+        0.44
+      ],
+      "Lib@1": [
+        0.64,
+        0.88
+      ]
+    },
+    "speech": {
+      "Hit@1": [
+        0.22,
+        0.5
+      ],
+      "Hit@5": [
+        0.64,
+        0.88
+      ],
+      "R1@0.5": [
+        0.02,
+        0.18
+      ],
+      "R1@0.7": [
+        0.0,
+        0.0
+      ],
+      "Lib@1": [
+        0.02,
+        0.16
+      ]
+    },
+    "fused-equal": {
+      "Hit@1": [
+        0.62,
+        0.86
+      ],
+      "Hit@5": [
+        0.94,
+        1.0
+      ],
+      "R1@0.5": [
+        0.28,
+        0.54
+      ],
+      "R1@0.7": [
+        0.14,
+        0.36
+      ],
+      "Lib@1": [
+        0.24,
+        0.48
+      ]
+    },
+    "fused-adaptive": {
+      "Hit@1": [
+        0.62,
+        0.86
+      ],
+      "Hit@5": [
+        1.0,
+        1.0
+      ],
+      "R1@0.5": [
+        0.28,
+        0.56
+      ],
+      "R1@0.7": [
+        0.14,
+        0.36
+      ],
+      "Lib@1": [
+        0.26,
+        0.54
+      ]
+    }
+  },
+  "rows": [
+    {
+      "qid": 6519,
+      "query": "An asian woman is eating a pastry item in a cone",
+      "vid": "2BzoQ31IPhk_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 6896,
+      "query": "Blonde woman drives a car with her children in the back.",
+      "vid": "VRoXu96WlbM_660.0_810.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 8646,
+      "query": "A woman energises a group of people to excersise and be fitter.",
+      "vid": "Piw-9dOC8YQ_660.0_810.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 10273,
+      "query": "A soldier in uniform is talking in wood building.",
+      "vid": "-oPEG4FKHy8_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 9664,
+      "query": "People hold different protest signs.",
+      "vid": "rZQjpKRsPMQ_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 6065,
+      "query": "Two guys are competing at table tennis.",
+      "vid": "E6yFTWlChmE_360.0_510.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 617,
+      "query": "Man in yellow top rides down a escalator.",
+      "vid": "ioWAoEVYaP0_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 4378,
+      "query": "A dash cam view of the car drive at night.",
+      "vid": "_t21xx94wZw_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 3925,
+      "query": "A marbled dark cat with white boot patterns is eating out of a dish.",
+      "vid": "FYU3KWg9TdQ_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 6266,
+      "query": "Woman vacuums rug in living room",
+      "vid": "UaYhvOSmzNc_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 3858,
+      "query": "School kids singing at a school",
+      "vid": "rsNuM2HcRh8_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 2698,
+      "query": "Young Mother have some chat with her sun",
+      "vid": "rRpUM9ZoNkU_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 7567,
+      "query": "Two man in matching blue sweatshirts eat mcdonalds and walk together after.",
+      "vid": "Ehpo8gXg27I_660.0_810.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 9231,
+      "query": "A woman in black suit is talking in front of a camera about weather forecast",
+      "vid": "rwvwrgx9cTo_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 4320,
+      "query": "Three people are riding in the back of a van.",
+      "vid": "ebCzdax-fjA_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 2647,
+      "query": "Blonde woman holds a makeup brush and palette and applies it to her face.",
+      "vid": "iH1-Z6eB2cY_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 7834,
+      "query": "Tourists are stopping to look at the red rocky plateaus and outcrops.",
+      "vid": "QHFy-nWNJYk_360.0_510.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 657,
+      "query": "Woman enters a hotel room and shows it off.",
+      "vid": "iD6VPW7oJ_I_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 6824,
+      "query": "A man walking and talking on a mountain path passes a pack mule with a large load walking by itself, with people trailing far behind",
+      "vid": "sa-O_S2jzCw_210.0_360.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 5915,
+      "query": "A man films himself while standing in front of a beach.",
+      "vid": "wUgPzvcKK5c_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 6657,
+      "query": "A woman in a black dress and sunglasses is relaxing under an orange umbrella on the beach.",
+      "vid": "xDaZ261SHZA_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 1874,
+      "query": "Woman talks while looking at herself in the mirror.",
+      "vid": "n_NdBRz6Z1E_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 4069,
+      "query": "A man in a black coat with a black and red hat is holding a saxophone while sitting on a bridge.",
+      "vid": "N5g7D9Qk7WI_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 10132,
+      "query": "Two TV show hosts sit on a red couch and discuss the news.",
+      "vid": "NzyjaMWxNrU_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 222,
+      "query": "A teacher is writing on a white board.",
+      "vid": "Piw-9dOC8YQ_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 9982,
+      "query": "Dash cam footage of police officers performing a traffic stop before shooting.",
+      "vid": "iWBU-K5dbhE_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 5250,
+      "query": "A person makes a gift package while sitting at a table.",
+      "vid": "00DH3yn5C30_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 4283,
+      "query": "Woman uses the bottle on her face and wipes it down.",
+      "vid": "Z3-IZ3HAmIA_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 7751,
+      "query": "Woman looks through a menu.",
+      "vid": "UQHx-1rF89U_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 2822,
+      "query": "White American girl having fun in Nigeria at Festival",
+      "vid": "CltHKz3Zfxc_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 5651,
+      "query": "Man in pink top eats fish.",
+      "vid": "_NznSSfDxdo_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 4691,
+      "query": "A historical looking city located on an island is coming into view.",
+      "vid": "T60_zAvnAsU_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 8261,
+      "query": "Man in backwards cap monologues to his professional mic.",
+      "vid": "UDEfgewcr5E_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 2791,
+      "query": "A girl is showing off her vanity and a shrine on display on top of it.",
+      "vid": "ocLUzCNodj4_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 6441,
+      "query": "Four people having some drinks at a restaurant while two of them talk to the camera",
+      "vid": "gDgMQI6q448_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 9624,
+      "query": "a man in a safety vest is going to a work site",
+      "vid": "FWy5ZcDu_i8_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 7412,
+      "query": "Dolls are kept in ornament display cases.",
+      "vid": "cLvULsyPH4E_510.0_660.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 9719,
+      "query": "A man and a child are picking through the rubble in an area.",
+      "vid": "SFR7tydO10k_210.0_360.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 4543,
+      "query": "A woman walks along a street talking to the camera before meeting up with her friends.",
+      "vid": "4IYQN95j6ok_210.0_360.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 4235,
+      "query": "A driver is showing their view under water.",
+      "vid": "6OV8g7JkMvg_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 1893,
+      "query": "Tourist girl filming beautiful neighbourhood with her friend",
+      "vid": "N5DpPCcQxJ4_210.0_360.0",
+      "vision": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 2166,
+      "query": "Two girls having ravoli, lasagne, salad and a drink for their lunch",
+      "vid": "3fESWnyZC0o_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 8818,
+      "query": "A girl with yellow top is chopping avocado and making a filling for sandwich.",
+      "vid": "EjV6yAxwyyI_510.0_660.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 0.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 1626,
+      "query": "Man with white t shirt stands in front of a ornate European building.",
+      "vid": "gTAvxnQtjXM_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      }
+    },
+    {
+      "qid": 360,
+      "query": "Plastic bags are tied on top.",
+      "vid": "kMuq1MNhP00_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 2570,
+      "query": "A lady applying lipstick on her lips",
+      "vid": "7PKEbzSNwts_360.0_510.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 4831,
+      "query": "Group of graduates in red pose for pictures.",
+      "vid": "IAbAn-MkMH8_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 1067,
+      "query": "People do skateboarding tricks in a city.",
+      "vid": "jyHSYDfqPnU_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 6538,
+      "query": "A woman in black hijab lying on the bed and summarize her trip.",
+      "vid": "yITWrNLEGLE_60.0_210.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 1.0,
+        "R1@0.7": 1.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    },
+    {
+      "qid": 4512,
+      "query": "Woman wears mirror sunglasses in her plane seat.",
+      "vid": "Uw8hpJfV-uQ_210.0_360.0",
+      "vision": {
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 1.0
+      },
+      "speech": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-equal": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      },
+      "fused-adaptive": {
+        "Hit@1": 0.0,
+        "Hit@5": 1.0,
+        "R1@0.5": 0.0,
+        "R1@0.7": 0.0,
+        "Lib@1": 0.0
+      }
+    }
+  ]
+}

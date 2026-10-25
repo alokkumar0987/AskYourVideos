@@ -61,6 +61,9 @@ def download(vid: str, out: Path, ffmpeg: str | None) -> bool:
     ]
     if ffmpeg:
         cmd[1:1] = ["--ffmpeg-location", ffmpeg]
+    deno = YT_DLP.with_name("deno.exe" if sys.platform == "win32" else "deno")
+    if deno.is_file():  # YouTube's JS challenges need a runtime; without one it asks to sign in
+        cmd[1:1] = ["--js-runtimes", f"deno:{deno}"]
     try:
         subprocess.run(cmd, check=True, timeout=300, capture_output=True, text=True, errors="replace")
     except subprocess.CalledProcessError as exc:
@@ -74,12 +77,67 @@ def download(vid: str, out: Path, ffmpeg: str | None) -> bool:
     return out.is_file() and out.stat().st_size > 0
 
 
+def cut_local(vid: str, source_dir: Path, out: Path, ffmpeg: str | None) -> bool:
+    """Cut the annotated 150 s from a full video the user downloaded as <youtube_id>.<ext>."""
+    yt, start, end = parse_vid(vid)
+    sources = [p for p in source_dir.glob(f"{yt}.*") if p.suffix.lower() in {".mp4", ".mkv", ".webm", ".mov"}]
+    if not sources:
+        return False
+    exe = str(Path(ffmpeg) / "ffmpeg") if ffmpeg else "ffmpeg"
+    # Re-encode instead of stream copy so the clip starts exactly at `start`
+    # (a copy would snap to the previous keyframe and shift every window).
+    cmd = [
+        exe, "-v", "error", "-y", "-ss", f"{start:g}", "-to", f"{end:g}", "-i", str(sources[0]),
+        "-vf", "scale=-2:360", "-c:v", "libx264", "-preset", "veryfast", "-crf", "26",
+        "-c:a", "aac", "-b:a", "96k", str(out),
+    ]
+    try:
+        subprocess.run(cmd, check=True, timeout=600, capture_output=True)
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        out.unlink(missing_ok=True)
+        return False
+    return out.is_file() and out.stat().st_size > 0
+
+
+HF_MIRROR = "ayushsdev/qvhighlights-videos"  # the authors' released clips, sharded by first character
+
+
+def download_hf(vid: str, out: Path) -> bool:
+    """Fetch the already-cut 150 s clip from a Hugging Face mirror of the official release.
+
+    No YouTube involved, so it works where yt-dlp gets bot-checked.
+    """
+    import shutil
+
+    from huggingface_hub import hf_hub_download
+    from huggingface_hub.errors import EntryNotFoundError
+
+    for shard in dict.fromkeys((vid[0], vid[0].lower())):
+        try:
+            path = hf_hub_download(HF_MIRROR, f"{shard}/{vid}.mp4", repo_type="dataset")
+        except EntryNotFoundError:
+            continue
+        shutil.copyfile(path, out)
+        return out.stat().st_size > 0
+    return False
+
+
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--n", type=int, default=50, help="Number of clips to download")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--ffmpeg", default=None, help="Folder with ffmpeg, if it is not on PATH")
     p.add_argument("--pause", type=float, default=25.0, help="Seconds to wait between downloads")
+    p.add_argument(
+        "--local",
+        type=Path,
+        help="Folder of full videos named <youtube_id>.mp4 (downloaded by hand); cut clips "
+        "from these instead of downloading. See out/qvh_video_list.txt for the list.",
+    )
+    p.add_argument(
+        "--hf", action="store_true",
+        help=f"Download the released clips from the Hugging Face mirror {HF_MIRROR} instead of YouTube",
+    )
     args = p.parse_args()
 
     if not ANNOTATIONS.is_file():
@@ -105,6 +163,12 @@ def main() -> None:
         tried += 1
         out = videos / f"{vid}.mp4"
         cached = out.is_file()
+        if args.local or args.hf:
+            ok = cached or (download_hf(vid, out) if args.hf else cut_local(vid, args.local, out, args.ffmpeg))
+            print(f"[{len(kept) + ok:>3}/{args.n}] {'ok  ' if ok else 'missing'} {vid}", flush=True)
+            if ok:
+                kept.append(vid)
+            continue
         try:
             ok = cached or download(vid, out, args.ffmpeg)
         except Blocked as exc:

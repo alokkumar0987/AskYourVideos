@@ -79,6 +79,18 @@ def score(ranked_global: list[int], index: VideoIndex, video: str, windows) -> d
     }
 
 
+def bootstrap_ci(values: list[float], resamples: int = 1000, seed: int = 0) -> tuple[float, float]:
+    """95% percentile interval of the mean, by resampling queries with replacement.
+
+    With few queries a single number hides how much it could move; the interval
+    says how far (e.g. 50 queries at 30% is roughly 17-43%).
+    """
+    rng = random.Random(seed)
+    n = len(values)
+    means = sorted(sum(rng.choices(values, k=n)) / n for _ in range(resamples))
+    return means[int(0.025 * resamples)], means[int(0.975 * resamples) - 1]
+
+
 def random_baseline(index: VideoIndex, cases, trials: int = 200) -> dict[str, float]:
     """Expected metrics if segments were ranked at random (same window rule)."""
     rng = random.Random(0)
@@ -139,13 +151,25 @@ def main() -> None:
 
     n = len(cases)
     table = {s: {k: round(totals[s][k] / n, 3) for k in METRICS} for s in systems}
+    ci = {
+        s: {k: [round(x, 3) for x in bootstrap_ci([r[s][k] for r in rows])] for k in METRICS}
+        for s in systems
+    }
     table["random"] = {k: round(v, 3) for k, v in random_baseline(index, [(v, w) for _, v, w in cases]).items()}
-    print(f"QVHighlights val subset: {n} queries over {len(indexed)} clips (zero-shot)\n")
-    print(f"{'system':16s} " + " ".join(f"{k:>7s}" for k in METRICS))
+    print(f"QVHighlights val subset: {n} queries over {len(indexed)} clips (zero-shot)")
+    print("cells: mean [95% bootstrap interval]\n")
+    print(f"{'system':16s} " + " ".join(f"{k:>18s}" for k in METRICS))
     for system, m in table.items():
-        print(f"{system:16s} " + " ".join(f"{m[k]:7.2f}" for k in METRICS))
+        cells = [
+            f"{m[k]:.2f} [{ci[system][k][0]:.2f}-{ci[system][k][1]:.2f}]" if system in ci else f"{m[k]:.2f}"
+            for k in METRICS
+        ]
+        print(f"{system:16s} " + " ".join(f"{c:>18s}" for c in cells))
     Path(args.out).write_text(
-        json.dumps({"n_queries": n, "n_clips": len(indexed), "expand_frac": EXPAND_FRAC, "table": table, "rows": rows}, indent=2),
+        json.dumps(
+            {"n_queries": n, "n_clips": len(indexed), "expand_frac": EXPAND_FRAC, "table": table, "ci95": ci, "rows": rows},
+            indent=2,
+        ),
         encoding="utf-8",
     )
     print(f"\nsaved {args.out}")

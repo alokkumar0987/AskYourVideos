@@ -47,7 +47,7 @@ def _build_parser() -> argparse.ArgumentParser:
     se.add_argument(
         "--mode",
         choices=("vision", "speech", "fused"),
-        help="What to search: frames, transcript, or both via RRF (default: fused if the index has speech)",
+        help="What to search: frames, transcript, or both via RRF (default: vision; speech helps only for queries about what is said)",
     )
     se.add_argument(
         "--fusion",
@@ -191,7 +191,7 @@ def _retrieve(args, index: VideoIndex, embedder, top_k: int):
     from askvideo.speech import SpeechIndex, TextEmbedder
 
     has_speech = SpeechIndex.exists(args.index_dir)
-    mode = args.mode or ("fused" if has_speech else "vision")
+    mode = args.mode or "vision"  # fused hurt visual queries on QVHighlights (Hit@1 0.84 -> 0.74)
     if mode != "vision" and not has_speech:
         raise ValueError(f"--mode {mode} needs speech; run `askvideo index ... --speech` first")
     speech = text_embedder = None

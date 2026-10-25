@@ -124,7 +124,7 @@ Numbers come from the reference run in [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md
            └──────────────┬────────────────┘
                           ▼
              ┌─────────────────────────┐
-             │ RRF  (modality level)   │  mode = vision | speech | fused
+             │ RRF  (modality level)   │  mode = vision (default) | speech | fused
              │ vision ⊕ speech, weights│  strategy = adaptive (default):
              │ w_v, w_s per query      │  weight ∝ z-score of each
              │                         │  modality's top score

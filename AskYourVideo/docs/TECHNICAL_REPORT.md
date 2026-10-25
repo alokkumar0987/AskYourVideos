@@ -140,7 +140,7 @@ Prompted by a reviewer's hypothesis that vision-only indexing loses about 20% re
 | Speech only | 0.39 / 0.65 | 0.38 / 0.75 | 0.33 / 0.50 | 0.50 / 0.83 |
 | Fused, equal votes | 0.61 / **0.89** | 0.38 / 0.75 | 0.58 / 0.92 | 1.00 / 1.00 |
 | Fused, fixed weight (leave-one-out) | 0.65 / 0.81 | 0.12 / 0.38 | 0.83 / 1.00 | 1.00 / 1.00 |
-| **Fused, adaptive (default)** | **0.69** / 0.85 | 0.38 / 0.75 | 0.75 / 0.83 | 1.00 / 1.00 |
+| **Fused, adaptive** (strategy used in fused mode) | **0.69** / 0.85 | 0.38 / 0.75 | 0.75 / 0.83 | 1.00 / 1.00 |
 
 **Findings.**
 1. **The reviewer was right for spoken queries.** Vision alone found only 38% of spoken-only moments in the top 5. Adding speech doubled that to 75%. How much overall recall changes depends on the query mix: here +4 points R@5, with 31% spoken queries.
@@ -161,9 +161,38 @@ Prompted by a reviewer's hypothesis that vision-only indexing loses about 20% re
    - The code stays available, opt-in, via `SpeechIndex.rank(..., phonetic=True)`.
 7. **A query-type classifier isn't worth building yet.** I measured the headroom first. An oracle that routes every visual or mixed query to vision and every spoken query to speech would reach R@1 0.77 and R@5 0.92, against 0.69 / 0.85 for adaptive fusion. That is only 2 more correct queries out of 26. A real classifier makes mistakes, and its expected R@1 at 90 / 80 / 70% accuracy would be 0.72 / 0.68 / 0.63, so it must be over about 85% accurate just to beat parameter-free adaptive fusion. With 8 spoken queries, such a classifier can be neither trained nor reliably evaluated. Revisit with 100+ queries (30–40 spoken), comparing a zero-shot LLM router and a keyword rule against adaptive fusion on held-out queries.
 
-## 9. Next steps
+## 9. Public benchmark: QVHighlights (pilot)
 
-1. **Benchmark** against public moment-retrieval data (e.g. Charades-STA, QVHighlights). Report R@1/R@5 at temporal IoU 0.5/0.7, and detector frames per query, against a per-frame detection baseline.
+QVHighlights (Lei et al., NeurIPS 2021) pairs 150-second YouTube clips with human-written queries and human-marked time windows (median 16 s). The annotations come from the authors' GitHub repo (`jayleicn/moment_detr`, CC BY-NC-SA 4.0). The clips are the authors' released files, fetched from a Hugging Face mirror (`ayushsdev/qvhighlights-videos`), because YouTube bot-checked yt-dlp on both Wi-Fi and mobile data.
+
+**Setup.**
+- 50 validation queries over 50 clips, chosen by a seeded shuffle (`eval/qvh_prepare.py --n 50 --hf`).
+- One library holds all 50 clips. Each query is scored inside its own clip, and *Lib@1* also scores the search across the whole library.
+- Frames are embedded with SigLIP 2. Speech uses Whisper `small` (RTF ≈ 0.28 on this CPU, vs 0.5–2.2 for turbo).
+- **Zero-shot:** nothing is trained on QVHighlights, so these numbers are not directly comparable with published models trained on its train split, and those are usually reported on the test split.
+- The predicted window is the top segment grown over adjacent segments that also rank in the clip's top 20%. This rule was fixed in advance, not tuned.
+- Brackets are 95% bootstrap intervals over the 50 queries. Reproduce with `python eval/run_qvh_eval.py`.
+
+| System | Hit@1 | Hit@5 | R1@0.5 | R1@0.7 | Lib@1 |
+|---|---|---|---|---|---|
+| **Vision** | **0.84** [0.74–0.94] | 0.98 [0.94–1.00] | **0.56** [0.42–0.70] | **0.30** [0.18–0.44] | **0.76** [0.64–0.88] |
+| Speech | 0.36 [0.22–0.50] | 0.76 [0.64–0.88] | 0.10 [0.02–0.18] | 0.00 | 0.08 [0.02–0.16] |
+| Fused, equal | 0.74 [0.62–0.86] | 0.98 [0.94–1.00] | 0.40 [0.28–0.54] | 0.24 [0.14–0.36] | 0.36 [0.24–0.48] |
+| Fused, adaptive | 0.74 [0.62–0.86] | 1.00 | 0.42 [0.28–0.56] | 0.24 [0.14–0.36] | 0.40 [0.26–0.54] |
+| Random | 0.28 | 0.72 | 0.02 | 0.00 | 0.01 |
+
+**Findings.**
+1. **Zero-shot vision localizes well.** R1@0.5 is 0.56, against 0.02 for random. Searching all 50 clips without being told which video lands on the right clip and moment 76% of the time.
+2. **Hit@1 flatters every system**, since random already gets 0.28 because ground-truth windows are long. R1@0.5 and R1@0.7 are the honest metrics.
+3. **Speech hurts here.** QVHighlights queries describe what is *seen* ("a woman shows her outfit"), and vlog chatter matches many queries loosely. Across the library, fusion drops Lib@1 from 0.76 to 0.40.
+4. Together with section 8: speech helps when the query is about what was said (spoken R@5 0.38 → 0.75), and hurts on visual queries, most of all at library scale. **The default search mode is therefore `vision`.** `fused` and `speech` stay available for queries about speech.
+5. **Language detection.** Whisper `small` labelled 17 of the first 23 clips English. Confident non-English detections (Korean, Tagalog, Hindi at ≥ 0.94) looked like genuine non-English vlogs. Two low-confidence "German" detections (0.54, 0.63) produced doubtful text, and one clip had no words at all (music only).
+
+**Limits.** 50 queries give intervals of ±10–14 points, so this is a pilot. Next: 300+ clips vision-only, and speech on a 100-clip subset.
+
+## 10. Next steps
+
+1. **Scale the benchmark:** QVHighlights to 300+ clips (vision-only), plus Charades-STA (`lmms-eval/charades_sta` on Hugging Face) for a second domain. Add mAP, and a per-frame detection baseline for cost.
 2. **Query parser:** split a query into a short visual description (for SigLIP) and object labels taken only from the query (for YOLOE).
 3. **Speech, continued:**
    - Get the 20 drafted queries verified by a human.
@@ -172,7 +201,7 @@ Prompted by a reviewer's hypothesis that vision-only indexing loses about 20% re
 4. **Identity:** SCRFD + ArcFace, for queries like "Alok at the laptop".
 5. Cache detections per (segment, label) so repeated queries cost nothing. Use overlapping segments or temporal smoothing at boundaries.
 
-## 10. Reproduce
+## 11. Reproduce
 
 ```powershell
 cd AskYourVideo
@@ -182,5 +211,8 @@ askvideo search "a man eating a biscuit" -i .askvideo_siglip2 --verify person bi
 python eval\run_eval.py
 askvideo index samples\Cooking_cake.mp4 samples\yt_8YNa-WLQ0gg.mp4 samples\yt_xH2iedsq0qA.mp4 -i .askvideo_speech --speech
 python eval\run_speech_eval.py
+python eval\qvh_prepare.py --n 50 --hf
+askvideo index data\qvhighlights\videos\*.mp4 -i .askvideo_qvh --speech --asr-model small
+python eval\run_qvh_eval.py
 python -m pytest -q
 ```

@@ -143,7 +143,7 @@ def _alerts_html(alerts) -> str:
 # ---------------------------------------------------------------- search
 
 
-def search(index_dir: str, query: str, verify: str, top_k: int, mode: str = "Fused"):
+def search(index_dir: str, query: str, verify: str, top_k: int, mode: str = "Vision"):
     from askvideo.frames import read_frame_at
     from askvideo.visualize import render_hit
 
@@ -468,8 +468,8 @@ def build() -> gr.Blocks:
                         )
                         top_k = gr.Slider(1, 10, value=3, step=1, label="Number of results")
                         mode = gr.Radio(
-                            ["Fused", "Vision", "Speech"], value="Fused", label="Search in",
-                            info="Speech needs a library indexed with speech; otherwise vision is used.",
+                            ["Vision", "Fused", "Speech"], value="Vision", label="Search in",
+                            info="Vision is best for what you can see. Use Fused or Speech for what was said.",
                         )
                         go = gr.Button("Search", variant="primary", size="lg")
                         gr.Examples(EXAMPLES, [query, verify], label="Try")

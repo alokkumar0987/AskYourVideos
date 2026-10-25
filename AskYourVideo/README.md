@@ -9,7 +9,7 @@ Find a moment in a video by describing it. The object detector runs only where i
 3. **Verify:** open-vocabulary YOLOE checks only those segments for the objects named in the query. Verified segments go first, and the retrieval order is kept.
 4. **Live:** on a webcam, YOLOE + ByteTrack track objects, SigLIP 2 raises text-defined alerts, and the session is indexed when it ends.
 
-On the reference video, the detector processed **80 of 8,983 frames (0.89%)** per query (CPU, about 19 s). Details, results and limitations are in [docs/TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md).
+On the reference video, the detector processed **80 of 8,983 frames (0.89%)** per query (CPU, about 19 s). On a 50-query QVHighlights pilot, zero-shot vision retrieval reached **R1@0.5 = 0.56** (random 0.02). Details, results and limitations are in [docs/TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md).
 
 ## Usage
 
