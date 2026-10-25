@@ -79,9 +79,7 @@ Reproduce with `python eval/run_eval.py` (output in `eval/results.json`). The te
 - Verification fixes "eating a biscuit". Retrieval's #1 there was a man holding up a butter pack, and the detector found no biscuit in it.
 - With the hand-picked labels `dough + glass`, verification breaks "biscuit cutter", because the glass is never detected. Using the query's own words (`biscuit cutter`) gives 6/6.
 
-| Retrieval's #1, rejected by the detector (no biscuit) | Promoted to #1 after verification |
-|---|---|
-| ![rejected](result_rejected.jpg) | ![verified](result_verified.jpg) |
+Example (frames not included because the source video is third-party): for "a man eating a biscuit", retrieval's #1 was a frame of the man holding up a pack of butter. The detector found no biscuit there, so the gate demoted it, and the segment at 04:31, where he holds a biscuit, became #1. `askvideo search ... --verify person biscuit --save-frames out\` renders both frames locally.
 
 The takeaway is not "verification is +1 query". It is that verification is a precision filter whose quality depends on choosing the right labels.
 
